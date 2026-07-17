@@ -340,7 +340,7 @@
     if (!currentVersion) currentVersion = @"1.0.0";
 
     // URL สำหรับเรียกเช็ค Releases ล่าสุดผ่านทาง GitHub API (กรุณาแทนที่เจ้าของโปรเจกต์และชื่อคลังเป็นของคุณตามจริง)
-    NSString *apiURLString = [NSString stringWithUTF8String:AY_OBFUSCATE("https://api.github.com/repos/opa334/Dopamine/releases/latest")];
+    NSString *apiURLString = [NSString stringWithUTF8String:AY_OBFUSCATE("https://api.github.com/repos/kuyk15820-cpu/V12New/releases/latest")];
     NSURL *url = [NSURL URLWithString:apiURLString];
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:15.0];

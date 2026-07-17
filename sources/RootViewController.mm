@@ -340,7 +340,7 @@
     if (!currentVersion) currentVersion = @"1.0.0";
 
     // URL สำหรับเรียกเช็ค Releases ล่าสุดผ่านทาง GitHub API (กรุณาแทนที่เจ้าของโปรเจกต์และชื่อคลังเป็นของคุณตามจริง)
-    NSString *apiURLString = [NSString stringWithUTF8String:AY_OBFUSCATE("https://api.github.com/repos/kuyk15820-cpu/V12New/releases/latest")];
+    NSString *apiURLString = [NSString stringWithUTF8String:AY_OBFUSCATE("https://api.github.com/repos/opa334/Dopamine/releases/latest")];
     NSURL *url = [NSURL URLWithString:apiURLString];
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:15.0];
@@ -406,7 +406,7 @@
 
 #pragma mark - NSURLSessionDownloadDelegate
 
-- (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didWriteData:(int64_at)bytesWritten totalBytesWritten:(int64_at)totalBytesWritten totalBytesExpectedToWrite:(int64_at)totalBytesExpectedToWrite {
+- (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didWriteData:(int64_t)bytesWritten totalBytesWritten:(int64_t)totalBytesWritten totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite {
     if (totalBytesExpectedToWrite > 0) {
         float progress = (float)totalBytesWritten / (float)totalBytesExpectedToWrite;
         dispatch_async(dispatch_get_main_queue(), ^{
